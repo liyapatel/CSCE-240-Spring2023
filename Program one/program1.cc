@@ -9,13 +9,25 @@ int main() {
   bool isArithmeticOperatorValid = true;
 
   while (true) {
+    total = 0;
     //std::cout << "Enter a relational expression in the format integer arithmetic-operator integer relational-operator integer: ";
     std::cin >> num1 >> arithmeticOperator >> num2 >> relationalOperator >> num3;
 
     bool isArithmeticOperatorValid = (arithmeticOperator == '+' || arithmeticOperator == '-' || arithmeticOperator == '*' || arithmeticOperator == '/' || arithmeticOperator == '%');
     bool isRelationalOperatorValid = (relationalOperator == '<' || relationalOperator == '>');
+    
+        if (!isArithmeticOperatorValid && !isRelationalOperatorValid) {
+      std::cout << "Unrecognized arithmetic operator " << arithmeticOperator << "\nUnrecognized relational operator " << relationalOperator << std::endl;
+    } else if (!isArithmeticOperatorValid) {
+      std::cout << "Unrecognized arithmetic operator " << arithmeticOperator << std::endl;
+    } else if (!isRelationalOperatorValid) {
+      std::cout << "Unrecognized relational operator " << relationalOperator << std::endl;
+    } else {
+      total++;
+      
+    
 
-    if (!isArithmeticOperatorValid) {
+    /*if (!isArithmeticOperatorValid) {
       std::cout << "Unrecognized arithmetic operator " << arithmeticOperator << std::endl;
       //break;
         }
@@ -23,11 +35,12 @@ int main() {
       std::cout << "Unrecognized relational operator " << relationalOperator << std::endl;
       //break;
         }
-    /*if (!isArithmeticOperatorValid || !isRelationalOperatorValid) { 
+    
+    if (!isArithmeticOperatorValid || !isRelationalOperatorValid) { 
         break;
         continue;
         } */   
-    else {
+    //else {
             int result;
             switch (arithmeticOperator) {
                 case '+':
@@ -50,7 +63,7 @@ int main() {
                     break;
                     continue;
             }
-
+            total++;
             bool isTrue = false;
               if (relationalOperator == '<') {
                 isTrue = (result < num3);
