@@ -1,0 +1,7 @@
+Unrecognized relational operator ~
+3 * 4 > 12 - Incorrect
+Unrecognized arithmetic operator ^
+Unrecognized arithmetic operator ^
+8 ^ 10 > 0 - Correct
+7 - 12 < -4 - Correct
+2 of 3 = 66.67%
