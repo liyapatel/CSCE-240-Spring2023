@@ -23,7 +23,7 @@ bool LeapYear(int year);
 // For example, LastDayOfMonth(2) should return 0.
 // LastDayOfMonth(2, 2023) should return 28.
 // LastDayOfMonth(2, 2024) should return 29.
-int LastDayOfMonth(int month, int year);
+int LastDayOfMonth(int month, int year = 0);
 
 // ValidDate function should take an integer for the month, an integer for
 // the day, and an integer for the year as three arguments. The function should
